@@ -1,2 +1,2 @@
-# formacao-java
-repositório com os códigos das aulas (curso da plataforma Alura)
+# Formação Java
+Repositório com os códigos das aulas realizadas no curso de formação Java da plataforma Alura.
