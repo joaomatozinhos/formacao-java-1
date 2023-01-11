@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author jpmat
- *
- */
-module bytebank {
-}
