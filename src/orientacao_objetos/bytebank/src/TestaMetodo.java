@@ -12,5 +12,14 @@ public class TestaMetodo {
 		if (conseguiuRetirar) {
 			System.out.println("Saldo atual: R$" + contaDoJoao.saldo);
 		}
+
+		Conta contaDoClaudio = new Conta();
+		contaDoClaudio.deposita(15000);
+
+		boolean sucessoTransferencia = contaDoClaudio.transfere(2500, contaDoJoao);
+		if (sucessoTransferencia) {
+			System.out.println("Saldo atual conta Cláudio: R$" + contaDoClaudio.saldo);
+			System.out.println("Saldo atual conta João: R$" + contaDoJoao.saldo);
+		}
 	}
 }

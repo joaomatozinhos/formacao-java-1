@@ -19,4 +19,16 @@ public class Conta {
 			return false;
 		}
 	}
+
+	public boolean transfere(double valor, Conta destino) {
+		if (this.saldo >= valor) {
+			this.saldo -= valor;
+			System.out.println("Transferência realizada.");
+			destino.deposita(valor);
+			return true;
+		} else {
+			System.out.println("Não foi possível realizar a transferência. Saldo indisponível.");
+			return false;
+		}
+	}
 }
