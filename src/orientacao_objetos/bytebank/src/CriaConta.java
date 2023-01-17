@@ -3,12 +3,12 @@ public class CriaConta {
 
 	public static void main(String[] args) {
 		Conta primeiraConta = new Conta();
-		primeiraConta.saldo = 3264.78;
-		System.out.println(primeiraConta.saldo);
+		primeiraConta.deposita(3264.78);
+		primeiraConta.getSaldo();
 
 		Conta segundaConta = new Conta();
-		segundaConta.saldo = 2156.50;
-		System.out.println(segundaConta.saldo);
+		segundaConta.deposita(2156.50);
+		segundaConta.getSaldo();
 
 		System.out.println(primeiraConta.agencia);
 		System.out.println(primeiraConta.titular);
