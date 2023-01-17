@@ -4,13 +4,13 @@ public class TestaMetodo {
 	public static void main(String[] args) {
 		Conta contaDoJoao = new Conta();
 		contaDoJoao.deposita(6770.50);
-		contaDoJoao.getSaldo();
+		System.out.println("Saldo conta do João: R$" + contaDoJoao.getSaldo());
 		contaDoJoao.deposita(635.50);
-		contaDoJoao.getSaldo();
+		System.out.println("Saldo conta do João: R$" + contaDoJoao.getSaldo());
 
 		boolean conseguiuRetirar = contaDoJoao.saca(1320);
 		if (conseguiuRetirar) {
-			contaDoJoao.getSaldo();
+			System.out.println("Saldo conta do João: R$" + contaDoJoao.getSaldo());
 		}
 
 		Conta contaDoClaudio = new Conta();
@@ -18,8 +18,8 @@ public class TestaMetodo {
 
 		boolean sucessoTransferencia = contaDoClaudio.transfere(2500, contaDoJoao);
 		if (sucessoTransferencia) {
-			contaDoClaudio.getSaldo();
-			contaDoJoao.getSaldo();
+			System.out.println("Saldo conta do Cláudio: R$" + contaDoClaudio.getSaldo());
+			System.out.println("Saldo conta do João: R$" + contaDoJoao.getSaldo());
 		}
 	}
 }

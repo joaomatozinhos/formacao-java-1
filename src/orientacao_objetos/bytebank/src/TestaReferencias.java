@@ -4,16 +4,16 @@ public class TestaReferencias {
 		Conta primeiraConta = new Conta();
 		primeiraConta.deposita(300);
 
-		primeiraConta.getSaldo();
+		System.out.println("Saldo primeira conta: R$" + primeiraConta.getSaldo());
 
 		Conta segundaConta = primeiraConta;
 
-		segundaConta.getSaldo();
+		System.out.println("Saldo segunda conta: R$" + segundaConta.getSaldo());
 
 		segundaConta.deposita(100);
-		segundaConta.getSaldo();
+		System.out.println("Saldo segunda conta: R$" + segundaConta.getSaldo());
 
-		primeiraConta.getSaldo();
+		System.out.println("Saldo primeira conta: R$" + primeiraConta.getSaldo());
 
 		if (primeiraConta == segundaConta) {
 			System.out.println("é a mesma conta");
