@@ -20,7 +20,6 @@ public class TestaBanco {
 		contaDaGeane.deposita(4560);
 		System.out.println("Saldo conta do João: R$" + contaDoJoao.getSaldo());
 		System.out.println("Saldo conta da Geane: R$" + contaDaGeane.getSaldo());
-
 	}
 
 }
