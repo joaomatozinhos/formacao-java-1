@@ -24,6 +24,14 @@ public class Conta {
 		this.agencia = agencia;
 	}
 
+	public Cliente getTitular() {
+		return titular;
+	}
+
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+
 	public void deposita(double valor) {
 		this.saldo += valor;
 		System.out.println("Valor depositado: R$" + valor);
