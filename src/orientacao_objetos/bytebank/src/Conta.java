@@ -4,6 +4,18 @@ public class Conta {
 	private int numero;
 	private Cliente titular = new Cliente();
 
+	public Conta(int agencia, int numero) {
+		if (agencia >= 0 && numero >= 0) {
+			System.out.println("Estou criando uma conta..");
+
+			this.agencia = agencia;
+			this.numero = numero;
+		} else {
+			System.out.println("Valores inválidos.");
+		}
+
+	}
+
 	public double getSaldo() {
 		return this.saldo;
 	}
@@ -12,16 +24,8 @@ public class Conta {
 		return this.numero;
 	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
 	public int getAgencia() {
 		return this.agencia;
-	}
-
-	public void setAgencia(int agencia) {
-		this.agencia = agencia;
 	}
 
 	public Cliente getTitular() {
