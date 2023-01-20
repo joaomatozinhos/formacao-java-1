@@ -3,10 +3,12 @@ public class Conta {
 	private int agencia;
 	private int numero;
 	private Cliente titular = new Cliente();
+	private static int quantidadeDeContas;
 
 	public Conta(int agencia, int numero) {
 		if (agencia >= 0 && numero >= 0) {
 			System.out.println("Estou criando uma conta..");
+			quantidadeDeContas++;
 
 			this.agencia = agencia;
 			this.numero = numero;
@@ -34,6 +36,10 @@ public class Conta {
 
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
+	}
+
+	public static int getQuantidadeDeContas() {
+		return quantidadeDeContas;
 	}
 
 	public void deposita(double valor) {
