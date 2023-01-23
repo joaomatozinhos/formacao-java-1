@@ -1,3 +1,5 @@
+package orientacao_objetos.bytebank.src;
+
 public class Conta {
 	private double saldo;
 	private int agencia;
@@ -39,7 +41,7 @@ public class Conta {
 	}
 
 	public static int getQuantidadeDeContas() {
-		return quantidadeDeContas;
+		return Conta.quantidadeDeContas;
 	}
 
 	public void deposita(double valor) {
