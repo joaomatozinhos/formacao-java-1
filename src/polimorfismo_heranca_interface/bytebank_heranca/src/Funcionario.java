@@ -4,7 +4,7 @@ public class Funcionario {
 
 	private String nome;
 	private String cpf;
-	protected double salario;
+	private double salario;
 
 	// public Funcionario(String nome, String cpf) {
 	// this.nome = nome;
