@@ -15,6 +15,8 @@ public class TestaGerente {
 
 		boolean autenticou = gerente.autentica("cabuloso");
 		System.out.println(autenticou);
+
+		System.out.println("Sua bonificação é de R$" + gerente.getBonificacao());
 	}
 
 }
