@@ -6,10 +6,10 @@ public class Funcionario {
 	private String cpf;
 	private double salario;
 
-	public Funcionario(String nome, String cpf) {
-		this.nome = nome;
-		this.cpf = cpf;
-	}
+	// public Funcionario(String nome, String cpf) {
+	// this.nome = nome;
+	// this.cpf = cpf;
+	// }
 
 	public double getBonificacao() {
 		return this.salario * 0.1;
