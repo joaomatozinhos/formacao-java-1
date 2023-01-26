@@ -13,10 +13,14 @@ public class TestaReferencias {
 		Funcionario a = new Assistente();
 		a.setSalario(1200.00);
 
+		Funcionario s = new Suporte();
+		s.setSalario(800.00);
+
 		ControleBonificacao controle = new ControleBonificacao();
 		controle.registra(g1);
 		controle.registra(f);
 		controle.registra(a);
+		controle.registra(s);
 
 		System.out.println(controle.getSoma());
 
