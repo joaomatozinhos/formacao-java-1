@@ -1,8 +1,8 @@
 package polimorfismo_heranca_interface.bytebank_heranca_conta.src;
 
-public class ContaCorrente extends Conta {
+public class ContaPoupanca extends Conta {
 
-	public ContaCorrente(int agencia, int numero) {
+	public ContaPoupanca(int agencia, int numero) {
 		super(agencia, numero);
 
 	}
