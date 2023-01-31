@@ -7,4 +7,11 @@ public class ContaCorrente extends Conta {
 
 	}
 
+	@Override
+	public boolean saca(double valor) {
+		// nesse método, ao sacar, há cobrança de uma taxa de 20 centavos.
+		double valorASacar = valor + 0.2;
+		return super.saca(valorASacar);
+	}
+
 }
