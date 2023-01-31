@@ -1,7 +1,7 @@
 package polimorfismo_heranca_interface.bytebank_heranca_conta.src;
 
-public class Conta {
-	private double saldo;
+public abstract class Conta {
+	protected double saldo;
 	private int agencia;
 	private int numero;
 	private Cliente titular = new Cliente();
@@ -44,10 +44,7 @@ public class Conta {
 		return Conta.quantidadeDeContas;
 	}
 
-	public void deposita(double valor) {
-		this.saldo += valor;
-		System.out.println("Valor depositado: R$" + valor);
-	}
+	public abstract void deposita(double valor);
 
 	public boolean saca(double valor) {
 		if (this.saldo >= valor) {
