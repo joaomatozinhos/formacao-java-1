@@ -4,6 +4,6 @@ public class Assistente extends Funcionario {
 
 	public double getBonificacao() {
 		System.out.println("Executando o método getBonificacao da classe Assistente");
-		return super.getBonificacao() + 100;
+		return 100;
 	}
 }
