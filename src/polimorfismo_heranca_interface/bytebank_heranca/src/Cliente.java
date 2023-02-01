@@ -2,20 +2,19 @@ package polimorfismo_heranca_interface.bytebank_heranca.src;
 
 public class Cliente implements Autenticavel {
 
-	private String senha;
+	private AutenticacaoUtil autenticador;
+
+	public Cliente() {
+		this.autenticador = new AutenticacaoUtil();
+	}
 
 	@Override
 	public void setSenha(String senha) {
-		this.senha = senha;
+		this.autenticador.setSenha(senha);
 	}
 
 	@Override
 	public boolean autentica(String senha) {
-		if (this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
-
+		return this.autenticador.autentica(senha);
 	}
 }
