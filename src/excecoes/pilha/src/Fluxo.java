@@ -4,7 +4,18 @@ public class Fluxo {
 
 	public static void main(String[] args) {
 		System.out.println("Ini do main");
-		metodo1();
+		try {
+			metodo1();
+		} catch (ArithmeticException e) {
+			String msg = e.getMessage();
+			System.out.println("ArithmeticException" + msg);
+			// e.printStackTrace();
+		} catch (NullPointerException e) {
+			String msg = e.getMessage();
+			System.out.println("NullPointerException" + msg);
+			// e.printStackTrace();
+		}
+
 		System.out.println("Fim do main");
 	}
 
@@ -19,11 +30,11 @@ public class Fluxo {
 		for (int i = 1; i <= 5; i++) {
 			System.out.println(i);
 
-			try {
-				int a = i / 0;
-			} catch (ArithmeticException e) {
-				System.out.println("ArithmeticException");
-			}
+			// int a = i / 0;
+
+			Conta c = null;
+			c.deposita();
+
 		}
 		System.out.println("Fim do metodo2");
 	}
