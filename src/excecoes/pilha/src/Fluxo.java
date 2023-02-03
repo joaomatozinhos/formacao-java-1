@@ -6,14 +6,10 @@ public class Fluxo {
 		System.out.println("Ini do main");
 		try {
 			metodo1();
-		} catch (ArithmeticException e) {
+		} catch (ArithmeticException | NullPointerException e) {
 			String msg = e.getMessage();
-			System.out.println("ArithmeticException" + msg);
-			// e.printStackTrace();
-		} catch (NullPointerException e) {
-			String msg = e.getMessage();
-			System.out.println("NullPointerException" + msg);
-			// e.printStackTrace();
+			System.out.println("Exception: " + msg);
+			e.printStackTrace();
 		}
 
 		System.out.println("Fim do main");
