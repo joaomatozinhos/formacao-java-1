@@ -32,7 +32,8 @@ public class Fluxo {
 //			c.deposita();
 //
 //		}
-		throw new ArithmeticException("deu errado.");
+		// throw new ArithmeticException("deu errado.");
+		throw new MinhaException("deu muito errado");
 
 		// System.out.println("Fim do metodo2");
 	}
