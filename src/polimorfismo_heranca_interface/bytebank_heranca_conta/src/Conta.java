@@ -46,15 +46,15 @@ public abstract class Conta {
 
 	public abstract void deposita(double valor);
 
-	public boolean saca(double valor) {
-		if (this.saldo >= valor) {
-			this.saldo -= valor;
-			System.out.println("Saque de R$" + valor);
-			return true;
-		} else {
-			System.out.println("Não foi possível realizar o saque. Saldo indisponível.");
-			return false;
+	public void saca(double valor) {
+
+		if (this.saldo < valor) {
+			throw new SaldoInsuficienteException(
+					"Saque não realizado. Saldo indisponível. Saldo: " + this.saldo + ", Valor: " + valor);
 		}
+
+		this.saldo -= valor;
+
 	}
 
 	public boolean transfere(double valor, Conta destino) {
