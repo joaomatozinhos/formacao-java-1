@@ -1,6 +1,7 @@
 package polimorfismo_heranca_interface.bytebank_heranca_conta.src.br.com.bytebank.banco.teste;
 
-import polimorfismo_heranca_interface.bytebank_heranca_conta.src.br.com.bytebank.banco.modelo.*;
+import polimorfismo_heranca_interface.bytebank_heranca_conta.src.br.com.bytebank.banco.modelo.Conta;
+import polimorfismo_heranca_interface.bytebank_heranca_conta.src.br.com.bytebank.banco.modelo.ContaCorrente;
 
 public class TesteSaca {
 
