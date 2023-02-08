@@ -1,5 +1,12 @@
 package polimorfismo_heranca_interface.bytebank_heranca_conta.src.br.com.bytebank.banco.modelo;
 
+/**
+ * Classe que representa um cliente no Bytebank.
+ * 
+ * @author João Pedro Matozinhos
+ * @version 0.1
+ */
+
 public class Cliente {
 	private String nome;
 	private String cpf;

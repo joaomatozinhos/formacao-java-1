@@ -1,5 +1,12 @@
 package polimorfismo_heranca_interface.bytebank_heranca_conta.src.br.com.bytebank.banco.modelo;
 
+/**
+ * Classe que representa a moldura de uma conta.
+ * 
+ * @author João Pedro Matozinhos
+ * @version 0.1
+ */
+
 public abstract class Conta {
 	protected double saldo;
 	private int agencia;
@@ -7,6 +14,12 @@ public abstract class Conta {
 	private Cliente titular = new Cliente();
 	private static int quantidadeDeContas;
 
+	/**
+	 * Construtor para inicializar o objeto Conta a partir da agencia e numero.
+	 * 
+	 * @param agencia
+	 * @param numero
+	 */
 	public Conta(int agencia, int numero) {
 		if (agencia >= 0 && numero >= 0) {
 			System.out.println("Estou criando uma conta..");
@@ -46,6 +59,11 @@ public abstract class Conta {
 
 	public abstract void deposita(double valor);
 
+	/**
+	 * Valor precisa ser maior do que o saldo.
+	 * 
+	 * @param valor
+	 */
 	public void saca(double valor) {
 
 		if (this.saldo < valor) {
