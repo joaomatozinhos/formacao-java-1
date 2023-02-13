@@ -14,5 +14,8 @@ public class TestaArrayReferencia {
 
 		System.out.println(contas[0].getNumero());
 
+		int[] refs = { 1, 2, 3, 4, 5 };
+		System.out.println(refs[3]);
+
 	}
 }
