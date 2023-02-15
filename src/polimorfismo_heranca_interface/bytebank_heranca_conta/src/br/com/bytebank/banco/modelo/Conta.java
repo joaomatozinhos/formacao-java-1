@@ -86,4 +86,9 @@ public abstract class Conta {
 			return false;
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "Número: " + this.numero + ", Agência: " + this.agencia;
+	}
 }

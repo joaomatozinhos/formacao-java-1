@@ -13,4 +13,9 @@ public class ContaPoupanca extends Conta {
 		System.out.println("Valor depositado: R$" + valor);
 	}
 
+	@Override
+	public String toString() {
+		return "Conta Poupança, " + super.toString();
+	}
+
 }
