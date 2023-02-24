@@ -11,7 +11,7 @@ import polimorfismo_heranca_interface.bytebank_heranca_conta.src.br.com.bytebank
 import polimorfismo_heranca_interface.bytebank_heranca_conta.src.br.com.bytebank.banco.modelo.NumeroDaContaComparator;
 import polimorfismo_heranca_interface.bytebank_heranca_conta.src.br.com.bytebank.banco.modelo.TitularDaContaComparator;
 
-public class TestaSort {
+public class TestaOrdenacao {
 
 	public static void main(String[] args) {
 
