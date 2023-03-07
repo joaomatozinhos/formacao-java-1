@@ -8,7 +8,7 @@ public class TestaEscritaPrintStreamEPrintWriter {
 	public static void main(String[] args) throws IOException {
 
 		// PrintStream ps = new PrintStream("lorem2.txt");
-		PrintWriter ps = new PrintWriter("lorem2.txt");
+		PrintWriter ps = new PrintWriter("lorem2.txt", "UTF-8");
 
 		ps.println("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod");
 		ps.println();

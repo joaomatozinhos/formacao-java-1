@@ -15,7 +15,7 @@ public class TestaLeitura {
 		InputStream fis = new FileInputStream("lorem.txt");
 
 		// Leitor de fluxo de entrada
-		Reader isr = new InputStreamReader(fis);
+		Reader isr = new InputStreamReader(fis, "UTF-8");
 
 		// Leitor de buffer
 		BufferedReader br = new BufferedReader(isr);
