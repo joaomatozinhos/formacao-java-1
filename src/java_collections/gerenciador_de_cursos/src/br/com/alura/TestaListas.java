@@ -20,7 +20,8 @@ public class TestaListas {
 
 		aulas.forEach(aula -> System.out.println("Aula: " + aula));
 
-		System.out.println(aulas.size());
+		int totalElementos = aulas.size();
+		System.out.println(totalElementos);
 
 		Collections.sort(aulas);
 
