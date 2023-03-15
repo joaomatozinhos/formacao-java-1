@@ -21,6 +21,13 @@ public class TestaCursoComAluno {
 		System.out.println("Todos os alunos matriculados: ");
 		javaColecoes.getAlunos().forEach(aluno -> System.out.println(aluno));
 
+//		Iterator<Aluno> iterador = javaColecoes.getAlunos().iterator();
+//
+//		while (iterador.hasNext()) {
+//			Aluno proximo = iterador.next();
+//			System.out.println(proximo);
+//		}
+
 		System.out.print("O aluno " + a1.getNome() + " está matriculado? ");
 		System.out.println(javaColecoes.estaMatriculado(a1));
 
