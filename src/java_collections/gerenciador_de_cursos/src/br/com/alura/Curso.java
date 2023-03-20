@@ -12,6 +12,7 @@ import java.util.Set;
 public class Curso {
 	private String nome;
 	private String instrutor;
+	private int quantidadeDeAlunos;
 	private List<Aula> aulas = new ArrayList<Aula>();
 	private Set<Aluno> alunos = new HashSet<>();
 	private Map<Integer, Aluno> matriculaParaAluno = new HashMap<>();
@@ -21,12 +22,21 @@ public class Curso {
 		this.instrutor = instrutor;
 	}
 
+	public Curso(String nome, int quantidadeDeAlunos) {
+		this.nome = nome;
+		this.quantidadeDeAlunos = quantidadeDeAlunos;
+	}
+
 	public String getNome() {
 		return nome;
 	}
 
 	public String getInstrutor() {
 		return instrutor;
+	}
+
+	public int getQuantidadeDeAlunos() {
+		return quantidadeDeAlunos;
 	}
 
 	public List<Aula> getAulas() {
