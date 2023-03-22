@@ -1,4 +1,4 @@
-package java_collections.gerenciador_de_cursos.src.br.com.alura;
+package java_collections.gerenciador_de_cursos.src.br.com.alura.java8;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import java_collections.gerenciador_de_cursos.src.br.com.alura.Curso;
 
 public class TestaCursosJava8 {
 
