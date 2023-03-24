@@ -1,4 +1,4 @@
-package tdd_testes_automatizados_junit.src.main.java.br.com.alura.tdd;
+package tdd_testes_automatizados_junit.src.test.java;
 
 public class Calculadora {
 
