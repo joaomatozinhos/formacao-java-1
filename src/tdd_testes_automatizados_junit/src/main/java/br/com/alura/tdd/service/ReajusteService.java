@@ -8,10 +8,8 @@ import tdd_testes_automatizados_junit.src.main.java.br.com.alura.tdd.modelo.Func
 public class ReajusteService {
 
 	public void concedeReajuste(Funcionario funcionario, Desempenho desempenho) {
-		if (desempenho == Desempenho.A_DESEJAR) {
-			BigDecimal reajuste = funcionario.getSalario().multiply(new BigDecimal("0.03"));
-			funcionario.reajustaSalario(reajuste);
-		}
+		BigDecimal percentual = desempenho.percentualReajuste();
+		BigDecimal reajuste = funcionario.getSalario().multiply(percentual);
+		funcionario.reajustaSalario(reajuste);
 	}
-
 }
