@@ -1,4 +1,4 @@
-package projeto_screen_match;
+package projeto_screen_match.revisao_sintaxe;
 
 public class Condicional {
 
