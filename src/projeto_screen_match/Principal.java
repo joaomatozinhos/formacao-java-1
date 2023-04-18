@@ -1,7 +1,6 @@
 package projeto_screen_match;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import projeto_screen_match.src.br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import projeto_screen_match.src.br.com.alura.screenmatch.calculos.FiltroRecomendacao;
@@ -21,9 +20,7 @@ public class Principal {
 		System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
 		System.out.println(meuFilme.pegaMedia());
 
-		Serie lost = new Serie();
-		lost.setNome("Lost");
-		lost.setAnoDeLancamento(2000);
+		Serie lost = new Serie("Lost", 2000);
 		lost.exibeFichaTecnica();
 		lost.setTemporadas(10);
 		lost.setEpisodiosPorTemporada(10);
