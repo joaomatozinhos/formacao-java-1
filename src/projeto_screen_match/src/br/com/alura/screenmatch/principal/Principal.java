@@ -1,4 +1,4 @@
-package projeto_screen_match;
+package projeto_screen_match.src.br.com.alura.screenmatch.principal;
 
 import java.util.ArrayList;
 
