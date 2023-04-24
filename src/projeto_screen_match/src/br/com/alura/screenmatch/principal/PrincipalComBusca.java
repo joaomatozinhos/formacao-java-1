@@ -23,24 +23,37 @@ public class PrincipalComBusca {
 
 		leitura.close();
 
-		String url = "https://www.omdbapi.com/?t=" + tituloDoFilme + "&apikey=d7254e91";
+		String url = "https://www.omdbapi.com/?t=" + tituloDoFilme.replace(" ", "+") + "&apikey=d7254e91";
 
-		HttpClient client = HttpClient.newHttpClient();
-		HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
-		HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-		String json = response.body();
+		try {
 
-		System.out.println(json);
+			HttpClient client = HttpClient.newHttpClient();
+			HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
+			HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+			String json = response.body();
 
-		// Gson gson = new Gson();
-		// Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+			System.out.println(json);
 
-		Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
-		TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
-		System.out.println(meuTituloOmdb);
+			// Gson gson = new Gson();
+			// Titulo meuTitulo = gson.fromJson(json, Titulo.class);
 
-		Titulo meuTitulo = new Titulo(meuTituloOmdb);
-		System.out.println(meuTitulo);
+			Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+			TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+			System.out.println(meuTituloOmdb);
+
+			Titulo meuTitulo = new Titulo(meuTituloOmdb);
+			System.out.println(meuTitulo);
+		} catch (NumberFormatException e) {
+			System.out.println("Aconteceu um erro: ");
+			System.out.println(e.getMessage());
+		} catch (IllegalArgumentException e) {
+			System.out.println("Ocorreu um erro de argumento na busca, verifique o endereço.");
+			System.out.println(e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Aconteceu algo, não sei o que.");
+		}
+
+		System.out.println("O programa finalizou.");
 
 	}
 
