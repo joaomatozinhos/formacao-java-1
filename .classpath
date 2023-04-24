@@ -6,11 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/jpmat/Documents/Meus Documentos/java/formacao_java_alura/gson-2.10.1.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="C:/Users/jpmat/Documents/Meus Documentos/java/formacao_java_alura/gson-2.10.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
