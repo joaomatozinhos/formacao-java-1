@@ -11,6 +11,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import projeto_screen_match.src.br.com.alura.screenmatch.excecao.ErroDeConversaoDeAnoException;
 import projeto_screen_match.src.br.com.alura.screenmatch.modelos.Titulo;
 import projeto_screen_match.src.br.com.alura.screenmatch.modelos.TituloOmdb;
 
@@ -37,7 +38,9 @@ public class PrincipalComBusca {
 			// Gson gson = new Gson();
 			// Titulo meuTitulo = gson.fromJson(json, Titulo.class);
 
-			Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+			Gson gson = new GsonBuilder()
+				.setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+				.create();
 			TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
 			System.out.println(meuTituloOmdb);
 
@@ -49,8 +52,8 @@ public class PrincipalComBusca {
 		} catch (IllegalArgumentException e) {
 			System.out.println("Ocorreu um erro de argumento na busca, verifique o endereço.");
 			System.out.println(e.getMessage());
-		} catch (Exception e) {
-			System.out.println("Aconteceu algo, não sei o que.");
+		} catch (ErroDeConversaoDeAnoException e) {
+			System.out.println(e.getMessage());
 		}
 
 		System.out.println("O programa finalizou.");

@@ -1,5 +1,7 @@
 package projeto_screen_match.src.br.com.alura.screenmatch.modelos;
 
+import projeto_screen_match.src.br.com.alura.screenmatch.excecao.ErroDeConversaoDeAnoException;
+
 public class Titulo implements Comparable<Titulo> {
 
 	private String nome;
@@ -14,8 +16,14 @@ public class Titulo implements Comparable<Titulo> {
 		this.anoDeLancamento = anoDeLancamento;
 	}
 
-	public Titulo(TituloOmdb meuTituloOmdb) {
+	public Titulo(TituloOmdb meuTituloOmdb) throws ErroDeConversaoDeAnoException {
 		this.nome = meuTituloOmdb.title();
+
+		if (meuTituloOmdb.year().length() > 4) {
+			throw new ErroDeConversaoDeAnoException(
+					"Não consegui converter o ano " + "porque tem mais de 04 caracteres.");
+		}
+
 		this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
 		this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0, 3));
 	}
