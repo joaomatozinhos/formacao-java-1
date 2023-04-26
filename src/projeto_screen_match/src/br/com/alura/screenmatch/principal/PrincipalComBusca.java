@@ -1,5 +1,7 @@
 package projeto_screen_match.src.br.com.alura.screenmatch.principal;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -38,14 +40,16 @@ public class PrincipalComBusca {
 			// Gson gson = new Gson();
 			// Titulo meuTitulo = gson.fromJson(json, Titulo.class);
 
-			Gson gson = new GsonBuilder()
-				.setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-				.create();
+			Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
 			TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
 			System.out.println(meuTituloOmdb);
 
 			Titulo meuTitulo = new Titulo(meuTituloOmdb);
 			System.out.println(meuTitulo);
+
+			FileWriter escrita = new FileWriter("filmes.txt");
+			escrita.write(meuTitulo.toString());
+			escrita.close();
 		} catch (NumberFormatException e) {
 			System.out.println("Aconteceu um erro: ");
 			System.out.println(e.getMessage());
@@ -57,6 +61,15 @@ public class PrincipalComBusca {
 		}
 
 		System.out.println("O programa finalizou.");
+
+		Scanner scanner = new Scanner(new File("filmes.txt"));
+
+		while (scanner.hasNextLine()) {
+			String linha = scanner.nextLine();
+			System.out.println(linha);
+		}
+
+		scanner.close();
 
 	}
 
