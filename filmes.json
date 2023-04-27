@@ -1,0 +1,58 @@
+[
+  {
+    "Nome": "Forrest Gump",
+    "AnoDeLancamento": 1994,
+    "IncluidoNoPlano": false,
+    "SomaDasAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 142
+  },
+  {
+    "Nome": "Batman",
+    "AnoDeLancamento": 1989,
+    "IncluidoNoPlano": false,
+    "SomaDasAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 126
+  },
+  {
+    "Nome": "Star Wars: Episode IV - A New Hope",
+    "AnoDeLancamento": 1977,
+    "IncluidoNoPlano": false,
+    "SomaDasAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 121
+  },
+  {
+    "Nome": "Harry Potter and the Deathly Hallows: Part 2",
+    "AnoDeLancamento": 2011,
+    "IncluidoNoPlano": false,
+    "SomaDasAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 130
+  },
+  {
+    "Nome": "Logan",
+    "AnoDeLancamento": 2017,
+    "IncluidoNoPlano": false,
+    "SomaDasAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 137
+  },
+  {
+    "Nome": "Dogville",
+    "AnoDeLancamento": 2003,
+    "IncluidoNoPlano": false,
+    "SomaDasAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 178
+  },
+  {
+    "Nome": "Top Gun",
+    "AnoDeLancamento": 1986,
+    "IncluidoNoPlano": false,
+    "SomaDasAvaliacoes": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinutos": 109
+  }
+]
