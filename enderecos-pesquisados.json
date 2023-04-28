@@ -1,0 +1,42 @@
+[
+  {
+    "cep": "77430-650",
+    "logradouro": "Rua 318",
+    "complemento": "",
+    "bairro": "Residencial Jardim dos Buritis",
+    "localidade": "Gurupi",
+    "uf": "TO"
+  },
+  {
+    "cep": "85030-330",
+    "logradouro": "Rua João Maria Cabral Domingues",
+    "complemento": "",
+    "bairro": "Jardim das Américas",
+    "localidade": "Guarapuava",
+    "uf": "PR"
+  },
+  {
+    "cep": "67120-517",
+    "logradouro": "Passagem Coimbra",
+    "complemento": "",
+    "bairro": "Quarenta Horas (Coqueiro)",
+    "localidade": "Ananindeua",
+    "uf": "PA"
+  },
+  {
+    "cep": "79045-232",
+    "logradouro": "Rua Danúbio Azul",
+    "complemento": "",
+    "bairro": "Jardim Noroeste",
+    "localidade": "Campo Grande",
+    "uf": "MS"
+  },
+  {
+    "cep": "59054-510",
+    "logradouro": "Rua Murilo Melo",
+    "complemento": "",
+    "bairro": "Lagoa Nova",
+    "localidade": "Natal",
+    "uf": "RN"
+  }
+]
