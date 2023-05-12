@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 
 import design_patterns_I.loja.src.br.com.alura.loja.orcamento.Orcamento;
 
-public class CalculadoraDeImposto {
+public class ICMS implements Imposto {
 
-	public BigDecimal calcula(Orcamento orcamento, Imposto imposto) {
-		return imposto.calcula(orcamento);
+	public BigDecimal calcula(Orcamento orcamento) {
+		return orcamento.getValor().multiply(new BigDecimal("0.1"));
 	}
 
 }
