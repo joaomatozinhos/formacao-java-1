@@ -6,6 +6,7 @@ public class Orcamento {
 
 	private BigDecimal valor;
 	private int quantidadeDeItens;
+	private String situacao;
 
 	public Orcamento(BigDecimal valor, int quantidadeDeItens) {
 		this.valor = valor;
@@ -18,6 +19,18 @@ public class Orcamento {
 
 	public int getQuantidadeDeItens() {
 		return quantidadeDeItens;
+	}
+
+	public void aplicaDescontoExtra(BigDecimal valor) {
+		BigDecimal valorDoDescontoExtra = BigDecimal.ZERO;
+
+		if (situacao.equals("EM ANALISE")) {
+			valorDoDescontoExtra = new BigDecimal("0.05");
+		} else if (situacao.equals("APROVADO")) {
+			valorDoDescontoExtra = new BigDecimal("0.02");
+		}
+
+		this.valor = this.valor.subtract(valorDoDescontoExtra);
 	}
 
 }
