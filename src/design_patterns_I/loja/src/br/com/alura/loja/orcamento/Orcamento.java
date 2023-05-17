@@ -2,15 +2,19 @@ package design_patterns_I.loja.src.br.com.alura.loja.orcamento;
 
 import java.math.BigDecimal;
 
+import design_patterns_I.loja.src.br.com.alura.loja.orcamento.situacao.EmAnalise;
+import design_patterns_I.loja.src.br.com.alura.loja.orcamento.situacao.SituacaoOrcamento;
+
 public class Orcamento {
 
 	private BigDecimal valor;
 	private int quantidadeDeItens;
-	private String situacao;
+	private SituacaoOrcamento situacao;
 
 	public Orcamento(BigDecimal valor, int quantidadeDeItens) {
 		this.valor = valor;
 		this.quantidadeDeItens = quantidadeDeItens;
+		this.situacao = new EmAnalise();
 	}
 
 	public BigDecimal getValor() {
@@ -21,16 +25,27 @@ public class Orcamento {
 		return quantidadeDeItens;
 	}
 
-	public void aplicaDescontoExtra(BigDecimal valor) {
-		BigDecimal valorDoDescontoExtra = BigDecimal.ZERO;
-
-		if (situacao.equals("EM ANALISE")) {
-			valorDoDescontoExtra = new BigDecimal("0.05");
-		} else if (situacao.equals("APROVADO")) {
-			valorDoDescontoExtra = new BigDecimal("0.02");
-		}
+	public void aplicaDescontoExtra() {
+		BigDecimal valorDoDescontoExtra = this.situacao.calculaValorDoDescontoExtra(this);
 
 		this.valor = this.valor.subtract(valorDoDescontoExtra);
+	}
+
+	public void aprova() throws Exception {
+		this.situacao.aprova(this);
+	}
+
+	public void reprova() throws Exception {
+		this.situacao.reprova(this);
+	}
+
+	public void finaliza() throws Exception {
+		this.situacao.finaliza(this);
+	}
+
+	public void setSituacao(SituacaoOrcamento situacao) {
+		this.situacao = situacao;
+
 	}
 
 }
