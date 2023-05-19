@@ -2,9 +2,9 @@ package design_patterns_I.loja.src.br.com.alura.pedido.acao;
 
 import design_patterns_I.loja.src.br.com.alura.pedido.Pedido;
 
-public class SalvaPedidoNoBanco {
+public class SalvaPedidoNoBanco implements AcaoAposGerarPedido {
 
-	public void executa(Pedido pedido) {
+	public void executaAcao(Pedido pedido) {
 		System.out.println("Salvando pedido no banco de dados..");
 	}
 
