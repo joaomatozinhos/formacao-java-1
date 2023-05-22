@@ -1,4 +1,4 @@
-package design_patterns_I.loja.src.br.com.alura.pedido;
+package design_patterns_I.loja.src.br.com.alura.loja.pedido;
 
 import java.time.LocalDateTime;
 

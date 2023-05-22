@@ -1,10 +1,10 @@
-package design_patterns_I.loja.src.br.com.alura.pedido;
+package design_patterns_I.loja.src.br.com.alura.loja.pedido;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 
-import design_patterns_I.loja.src.br.com.alura.pedido.acao.EnviaEmailPedido;
-import design_patterns_I.loja.src.br.com.alura.pedido.acao.SalvaPedidoNoBanco;
+import design_patterns_I.loja.src.br.com.alura.loja.pedido.acao.EnviaEmailPedido;
+import design_patterns_I.loja.src.br.com.alura.loja.pedido.acao.SalvaPedidoNoBanco;
 
 public class TestaPedidos {
 

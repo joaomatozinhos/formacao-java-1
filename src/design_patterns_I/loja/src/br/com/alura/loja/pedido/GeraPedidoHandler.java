@@ -1,10 +1,10 @@
-package design_patterns_I.loja.src.br.com.alura.pedido;
+package design_patterns_I.loja.src.br.com.alura.loja.pedido;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 import design_patterns_I.loja.src.br.com.alura.loja.orcamento.Orcamento;
-import design_patterns_I.loja.src.br.com.alura.pedido.acao.AcaoAposGerarPedido;
+import design_patterns_I.loja.src.br.com.alura.loja.pedido.acao.AcaoAposGerarPedido;
 
 public class GeraPedidoHandler {
 
