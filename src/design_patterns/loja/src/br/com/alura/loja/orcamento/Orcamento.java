@@ -3,6 +3,7 @@ package design_patterns.loja.src.br.com.alura.loja.orcamento;
 import java.math.BigDecimal;
 
 import design_patterns.loja.src.br.com.alura.loja.orcamento.situacao.EmAnalise;
+import design_patterns.loja.src.br.com.alura.loja.orcamento.situacao.Finalizado;
 import design_patterns.loja.src.br.com.alura.loja.orcamento.situacao.SituacaoOrcamento;
 
 public class Orcamento {
@@ -46,6 +47,10 @@ public class Orcamento {
 	public void setSituacao(SituacaoOrcamento situacao) {
 		this.situacao = situacao;
 
+	}
+
+	public boolean isFinalizado() {
+		return situacao instanceof Finalizado;
 	}
 
 }
