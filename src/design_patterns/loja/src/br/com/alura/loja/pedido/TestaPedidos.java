@@ -16,7 +16,9 @@ public class TestaPedidos {
 		GeraPedido gerador = new GeraPedido(cliente, valorDoOrcamento, quantidadeDeItens);
 		GeraPedidoHandler handler = new GeraPedidoHandler(
 				Arrays.asList(new EnviaEmailPedido(), new SalvaPedidoNoBanco()));
-		handler.execute(gerador);
+		
+		// A classe GeraPedidoHandler com seu método executa() atua como fachada (padrão facade), pois encapsula todas as ações que devem ser realizadas após gerar um pedido, sem que o cliente saiba quais são elas e os detalhes internos.
+		handler.executa(gerador);
 	}
 
 }
