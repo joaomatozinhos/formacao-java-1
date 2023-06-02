@@ -4,21 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConexaoDB {
+public class ConnectionFactory {
 
-	public static void main(String[] args) {
-
+	public Connection recuperaConexao() {
 		try {
-			Connection connection = DriverManager
+			return DriverManager
 					.getConnection("jdbc:mysql://localhost:3306/byte_bank?user=root&password=root");
-
-			System.out.println("Conexão iniciada.");
-
-			connection.close();
 		} catch (SQLException e) {
-			e.printStackTrace();
-			System.out.println(e);
+			throw new RuntimeException(e);
 		}
 	}
-
 }
