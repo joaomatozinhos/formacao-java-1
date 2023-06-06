@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import jdbc.src.main.java.br.com.alura.bytebank.domain.RegraDeNegocioException;
 import jdbc.src.main.java.br.com.alura.bytebank.domain.cliente.DadosCadastroCliente;
+import jdbc.src.main.java.br.com.alura.bytebank.domain.conta.Conta;
 import jdbc.src.main.java.br.com.alura.bytebank.domain.conta.ContaService;
 import jdbc.src.main.java.br.com.alura.bytebank.domain.conta.DadosAberturaConta;
 
@@ -68,6 +69,14 @@ public class BytebankApplication {
 
 		System.out.println("Pressione qualquer tecla e de ENTER para voltar ao menu principal");
 		teclado.next();
+	}
+
+	private static void buscaContaPorNumero() {
+		System.out.println("Digite o número da conta:");
+		var numeroDaConta = teclado.nextInt();
+
+		Conta conta = service.buscaContaPorNumero(numeroDaConta);
+		System.out.println(conta);
 	}
 
 	private static void abrirConta() {
