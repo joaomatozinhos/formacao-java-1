@@ -43,6 +43,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/formacao_java_alura/mysql-connector-java-8.0.29.jar"/>
+	<classpathentry kind="lib" path="/formacao_java_alura/HikariCP-5.0.1.jar"/>
+	<classpathentry kind="lib" path="/formacao_java_alura/slf4j-api-2.0.7.jar"/>
+	<classpathentry kind="lib" path="/formacao_java_alura/slf4j-jdk14-2.0.7.jar"/>
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
