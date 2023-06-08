@@ -111,4 +111,20 @@ public class ContaDAO {
 
 	}
 
+	public void alteraSaldo(Integer numeroDaConta, BigDecimal valor) {
+		String sql = "UPDATE conta SET saldo = ? WHERE numero = ?";
+
+		try {
+			PreparedStatement preparedStatement = con.prepareStatement(sql);
+
+			preparedStatement.setBigDecimal(1, valor);
+			preparedStatement.setInt(2, numeroDaConta);
+
+			preparedStatement.execute();
+			preparedStatement.close();
+			con.close();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 }
