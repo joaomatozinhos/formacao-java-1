@@ -42,14 +42,15 @@ public class ContaService {
 		Connection con = connection.recuperaConexao();
 		new ContaDAO(con).salva(dadosDaConta);
 	}
-	
+
 	public void realizarDeposito(Integer numeroDaConta, BigDecimal valor) {
 		var conta = buscaContaPorNumero(numeroDaConta);
 		if (valor.compareTo(BigDecimal.ZERO) <= 0) {
 			throw new RegraDeNegocioException("Valor do deposito deve ser superior a zero!");
 		}
 
-		alteraSaldo(conta, valor);
+		BigDecimal novoValor = conta.getSaldo().add(valor);
+		alteraSaldo(conta, novoValor);
 	}
 
 	public void realizarSaque(Integer numeroDaConta, BigDecimal valor) {
