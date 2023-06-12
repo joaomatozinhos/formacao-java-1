@@ -2,7 +2,6 @@ package jdbc.src.main.java.br.com.alura.bytebank.domain.conta;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
-import java.util.HashSet;
 import java.util.Set;
 
 import jdbc.src.main.java.br.com.alura.bytebank.ConnectionFactory;
@@ -11,7 +10,6 @@ import jdbc.src.main.java.br.com.alura.bytebank.domain.RegraDeNegocioException;
 public class ContaService {
 
 	private ConnectionFactory connection;
-	private Set<Conta> contas = new HashSet<>();
 
 	public ContaService() {
 		this.connection = new ConnectionFactory();
@@ -78,16 +76,12 @@ public class ContaService {
 			throw new RegraDeNegocioException("Conta não pode ser encerrada pois ainda possui saldo!");
 		}
 
-		contas.remove(conta);
+		Connection con = connection.recuperaConexao();
+		new ContaDAO(con).deleta(numeroDaConta);
 	}
 
 	private void alteraSaldo(Conta conta, BigDecimal valor) {
 		Connection con = connection.recuperaConexao();
 		new ContaDAO(con).alteraSaldo(conta.getNumero(), valor);
-	}
-
-	private Conta buscarContaPorNumero(Integer numero) {
-		return contas.stream().filter(c -> c.getNumero() == numero).findFirst()
-				.orElseThrow(() -> new RegraDeNegocioException("Não existe conta cadastrada com esse número!"));
 	}
 }
